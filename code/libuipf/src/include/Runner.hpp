@@ -1,12 +1,21 @@
 #ifndef LIBUIPF_RUNNER_HPP
 #define LIBUIPF_RUNNER_HPP
 
+//B01C01 defines for cyclic dependencies Runner/ModuleInterface(/ModuleLoader)
+//include "data.hpp"
+//#include <string>
+
 #include "ProcessingChain.hpp"
-#include "ModuleLoader.hpp"
-#include "ModuleInterface.hpp"
+//B01C01
+//#include "ModuleLoader.hpp"
+//#include "ModuleInterface.hpp"
 #include "RunContext.hpp"
 
 namespace uipf{
+
+	//B01C01
+	class ModuleLoader;
+	class ModuleInterface;
 
 /**
  * Runner implements the class that brings Modules and Data together in a ProcessingChain.
@@ -108,5 +117,9 @@ class Runner{
 	};
 
 } // namespace
+
+//B01C01
+#include "ModuleLoader.hpp"
+#include "ModuleInterface.hpp"
 
 #endif // LIBUIPF_RUNNER_HPP

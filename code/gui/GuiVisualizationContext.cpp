@@ -31,7 +31,8 @@ void GuiVisualizationContext::displayImage(cv::Mat image)
 	image_ = QImage(tmp.data, tmp.cols, tmp.rows, tmp.step, QImage::Format_RGB888);
 
 	// send signal to GUI
-	emit createImageWindow(string("Image"));
+	//B01C01, added std:: to string as compiler could not resolve it
+	emit createImageWindow(std::string("Image"));
 }
 
 void GuiVisualizationContext::displayText(std::string text)

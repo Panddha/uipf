@@ -45,16 +45,20 @@ void StoreImage::run() {
 	if (filename.empty()) {
 		UIPF_LOG_DEBUG("filename is empty, generating new name for ", image->filename);
 		if (image->filename.empty()) {
-			filename = getProcessingStepName() + string(".png");
+			//B01C01 added std:: to string
+			filename = getProcessingStepName() + std::string(".png");
 		} else if (basePath.empty()) {
 			fs::path f(image->filename);
-			string ext = f.extension().string();
+			//B01C01 added std:: to string
+			std::string ext = f.extension().string();
 			if (ext.empty()) {
 				ext = ".png";
 			}
-			string name = f.stem().string();
+			//B01C01 added std:: to string
+			std::string name = f.stem().string();
 			fs::path path = f.parent_path();
-			filename = (path / fs::path(name + string("_") + getProcessingStepName() + uipf_str_to_lower(ext))).string();
+			//B01C01 added std:: to string("_")
+			filename = (path / fs::path(name + std::string("_") + getProcessingStepName() + uipf_str_to_lower(ext))).string();
 		} else {
 			filename = image->filename;
 		}

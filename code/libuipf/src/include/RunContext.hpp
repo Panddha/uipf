@@ -1,6 +1,8 @@
 #ifndef UIPFRAMEWORK_RUNCONTEXT_HPP
 #define UIPFRAMEWORK_RUNCONTEXT_HPP
 
+#include "data.hpp"
+
 namespace uipf {
 
 	class RunContext {

@@ -54,6 +54,10 @@ The following additional packages may be needed for building C++ code:
 
     sudo apt-get install build-essential cmake pkg-config
 
+This may also be required:
+
+    sudo apt-get install clang
+
 CGAL may also need to be installed:
 
     sudo apt-get install libcgal-dev

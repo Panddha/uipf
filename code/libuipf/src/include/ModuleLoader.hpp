@@ -8,7 +8,6 @@
 #include "ModuleMetaData.hpp"
 
 namespace uipf {
-
 	/**
 	 * This class implements a Pluginloader/Moduleloader that loads modules from dynamic libraries at runtime
 	 *
