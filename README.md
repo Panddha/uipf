@@ -60,7 +60,7 @@ This may also be required:
 
 CGAL may also need to be installed:
 
-    sudo apt-get install libcgal-dev
+    sudo apt-get install libcgal-dev libcgal-qt5-dev
 
 If you want to work on the GUI, you may also want to install Qt Creator:
 To install Qt5, you can download '.run' offline or online installer from qt open source community download (https://www.qt.io/download-open-source/#section-2)
@@ -90,6 +90,16 @@ For a fast build you can run `make -j 4` where 4 is the number of parallel execu
 this may take a lot of RAM and make the system unstable.
 
 #### Troubleshooting
+
+##### eror while runing _cmake .._
+
+When running _cmake .._ you may see the following error:
+
+    The imported target "CGAL::CGAL_Qt5" references the file
+    "/usr/lib/x86_64-linux-gnu/libCGAL_Qt5.so.11.0.1"
+    but this file does not exist.  Possible reasons include: 
+
+Solution: install libcgal-qt5-dev 'sudo apt-get install libcgal-qt5-dev'
 
 ##### error while loading shared libraries
 
