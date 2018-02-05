@@ -91,9 +91,9 @@ this may take a lot of RAM and make the system unstable.
 
 #### Troubleshooting
 
-##### eror while runing _cmake .._
+##### error while runing 'cmake ..'
 
-When running _cmake .._ you may see the following error:
+When running 'cmake ..' you may see the following error:
 
     The imported target "CGAL::CGAL_Qt5" references the file
     "/usr/lib/x86_64-linux-gnu/libCGAL_Qt5.so.11.0.1"
